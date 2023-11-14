@@ -14,6 +14,33 @@ class ClienteDAOMysql implements ClienteDAO {
 
     }
     public function findAll(){
+        $array = [];
+        $sql = $this->pdo->query("SELECT * FROM clientes");
+        if ($sql->rowCount() > 0) {
+            $data = $sql->fetchAll();
+
+            foreach ($data as $value) {
+                $c = new Cliente();
+                $c->setId_cliente($value['ID_CLIENTE']);
+                $c->setCli_bairro($value['CLI_BAIRRO']);
+                $c->setCli_numero($value['CLI_NUMERO']);
+                $c->setCli_cidade($value['CLI_CIDADE']);
+                $c->setCli_cep($value['CLI_CEP']);
+                $c->setCli_estado($value['CLI_ESTADO']);
+                $c->setCli_nome($value['CLI_NOME']);
+                $c->setCli_cpf($value['CLI_CPF']);
+                $c->setCli_rg($value['CLI_RG']);
+                $c->setCli_nascimento($value['CLI_NASCIMENTO']);
+                $c->setCli_celular($value['CLI_CELULAR']);
+                $c->setCli_email($value['CLI_EMAIL']);
+                $c->setCli_sexo($value['CLI_SEXO']);
+                $c->setCli_senha($value['CLI_SENHA']);
+
+                $array[] = $c;
+            }            
+        }
+
+        return $array;
 
     }
     public function findById($id){
@@ -38,7 +65,7 @@ class ClienteDAOMysql implements ClienteDAO {
             $c->setCli_sexo($data['CLI_SEXO']);
             $c->setCli_senha($data['CLI_SENHA']);
 
-            $array = $c;
+            $array[] = $c;
         }
 
         return $array;

@@ -1,41 +1,20 @@
 <?php
-require_once 'db/ClienteDAOMysql.php';
+session_start();
+require_once 'models/Funcionario.php';
 require_once 'db/FuncionarioDAOMysql.php';
 
-session_start();
-if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
-   header("Location: telaprincipal.php");
+if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
+    $id = $_SESSION['id_fun'];
+
+    $data = new FuncionarioDAOMysql();
+    $data = $data->findById($id);
+
 }else {
    if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
-      header("Location: admin.php");
+      header("Location: telaprincipal.php");
    }
    
-}
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-   if (isset($_POST['user']) && !empty($_POST['user'])) {
-      if (isset($_POST['pass']) && !empty($_POST['pass'])) {
-         $user = addslashes($_POST['user']);
-         $pass = md5($_POST['pass']);
-         
-         $c = new ClienteDAOMysql();
-         $f = new FuncionarioDAOMysql();
-
-         if ($c->auth($user, $pass) || $f->auth($user, $pass)) {
-               http_response_code(200);
-               echo json_encode(array("success" => true, "message" => "Autenticação realizada sucesso"));
-               exit();
-         } else {
-               http_response_code(401);
-               echo json_encode(array("success" => false, "message" => "Credenciais inválidas"));
-               exit();
-         }      
-      }
-   }
-
-   http_response_code(400);
-   echo json_encode(array("success" => false, "message" => "Parâmetros inválidos"));
-   exit();
+   header("Location: login.php");
 }
 
 ?>
@@ -50,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>felicity</title>
+      <title>Hospeda+</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -101,15 +80,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href="index.html">Tela Inicial</a>
+                                 <a class="nav-link" href=" ">Bem vindo, <?=$data->getFun_nome();?></a>
                               </li>
                            </ul>
+                           <div class="sign_btn"><a href="index.html">Sair</a></div>
                         </div>
                      </nav>
                   </div>
                </div>
             </div>
          </div>
+         
       </header>
       <!-- end header inner -->
       <!-- end header -->
@@ -127,28 +108,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <div class="form_book" >
-                     <div class="row">
-                        <div class="col-md-12">
-                           <label for="username">Email: </label>
-                           <input class="book_n" placeholder="email..." type="text" id="email" name="username" required>
-                        </div>
-                        <div class="col-md-12">
-                           <label for="password">Senha:</label>
-                           <input class="book_n" type="password" id="password" name="password" placeholder="senha..." required>
-                        </div>
-                        <div class="col-md-12">
-                           <div class="form-group">
-                              <button class="book_btn" id="bnt_auth">Entrar</button>
-                           </div>
-                        </div>
-                        <div class="col-md-12">
-                           <div class="form-group">
-                              <a href="recuperarsenha.html">Esqueceu a senha? Clique aqui</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                  <form class="form_book" action="telaprincipal.html" method="post">
+                     <h1>Bem-vindo à Tela Principal do Funcionário</h1>
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item">
+                              <a class="nav-link" href="gerenciarReserva.html">Gerenciar Reservas</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="listarquartos.html">Gerenciar Quartos</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="gerenciarUsuario.html">Gerenciar Usuários</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="telalimpeza.html">Gerenciar Limpeza</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="gerenciarpagamento.html">Gerenciar Pagamento</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="gerenciarconsumacao.html">Gerenciar Consumação</a>
+                           </li>
+                        </ul>
+                  </form>
                </div>
             </div>
          </div>
@@ -185,7 +167,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-      <script src="js/script.js"></script>
    </body>
 </html>
 
