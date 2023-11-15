@@ -100,7 +100,7 @@
      
                      <!-- Formulário de busca -->
                      <form class="search-form">
-                        <input type="text" placeholder="Número da Reserva">
+                        <input type="text" placeholder="CPF do cliente">
                         <input type="submit" value="Buscar">
                      </form>
                      <!-- Formulário de busca -->

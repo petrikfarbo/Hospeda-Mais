@@ -241,13 +241,13 @@
       </section>
       
       <!-- end form_lebal -->
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>Copyright 2023 All Right Reserved By <a href=" "> i6 - Tech </a></p>
-                     </div>
-                  </div>
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <p>Copyright 2023 All Right Reserved By
+                     <a href=" "> i6 - Tech </a>
+                  </p>
                </div>
             </div>
          </div>
@@ -263,6 +263,15 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         document.getElementById("submitBtn").addEventListener("click", function() {
+           // Aqui você pode adicionar qualquer lógica personalizada antes de redirecionar
+           // Por exemplo, validação de formulário ou manipulação de dados
+           // Após a lógica, redirecione para a página desejada usando:
+           window.location.href = "outra_pagina.html";
+         });
+      </script>
    </body>
 </html>
+
 
