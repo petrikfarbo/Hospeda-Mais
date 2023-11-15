@@ -112,22 +112,22 @@ if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
                      <h1>Bem-vindo à Tela Principal do Funcionário</h1>
                         <ul class="navbar-nav mr-auto">
                            <li class="nav-item">
-                              <a class="nav-link" href="gerenciarReserva.html">Gerenciar Reservas</a>
+                              <a class="nav-link" href="gerenciarReserva.php">Gerenciar Reservas</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="listarquartos.html">Gerenciar Quartos</a>
+                              <a class="nav-link" href="listarquartos.php">Gerenciar Quartos</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="gerenciarUsuario.html">Gerenciar Usuários</a>
+                              <a class="nav-link" href="gerenciarUsuario.php">Gerenciar Usuários</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="telalimpeza.html">Gerenciar Limpeza</a>
+                              <a class="nav-link" href="telalimpeza.php">Gerenciar Limpeza</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="gerenciarpagamento.html">Gerenciar Pagamento</a>
+                              <a class="nav-link" href="gerenciarpagamento.php">Gerenciar Pagamento</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="gerenciarconsumacao.html">Gerenciar Consumação</a>
+                              <a class="nav-link" href="gerenciarconsumacao.php">Gerenciar Consumação</a>
                            </li>
                         </ul>
                   </form>

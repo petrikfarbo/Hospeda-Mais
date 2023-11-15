@@ -24,4 +24,42 @@ $(document).ready(function(){
         });
     });
 
+    $('#btn_cadastrarQuarto').on('click', function () {
+        let id_quarto = $("#numero").val();
+        let capacidade = $("#capacidade").val();
+        let tipo_cama = $("#tipo_cama").val();
+        let tipo_disponibilidade = $("#tipo_disponibilidade").val();
+        let preco = $("#preco_quarto").val();
+
+        if(tipo_disponibilidade == 'disponivel'){
+            tipo_disponibilidade = 1;
+        }else{
+            tipo_disponibilidade = 0;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "adicionarquartos.php",
+            dataType: "json",
+            data: {
+                id_quarto: id_quarto,
+                capacidade: capacidade,
+                tipo_cama: tipo_cama,
+                tipo_disponibilidade: tipo_disponibilidade,
+                preco: preco
+            },
+            success: function (response) {
+                if (response.success) {
+                    // Redireciona para a página desejada em caso de sucesso
+                    window.location.href = "adicionarquartos.php";
+                }
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                // Exibe mensagens de erro no console em caso de falha na requisição
+                console.log(xhr);
+            }
+        });
+    });
+    
+
 });
