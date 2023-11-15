@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
    <head>
       <!-- basic -->
       <meta charset="utf-8">
@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Reservas</title>
+      <title>Principal</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -71,92 +71,111 @@
                </div>
             </div>
          </div>
+         
       </header>
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
       <section class="banner_main">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="text-bg">
-                     <div class="padding_lert">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-12">
+                 <div class="text-bg">
+                    <div class="padding_lert">
 
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
       <!-- end banner -->
       <!-- form_lebal -->
       <section>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <form class="form_gerenciar">
-                     <div class="row">
-     <!-- inicio tabela -->
-     
-                     <!-- Formulário de busca -->
-                     <form class="search-form">
-                        <input type="text" placeholder="Número da Reserva">
-                        <input type="submit" value="Buscar">
-                     </form>
-                     <!-- Formulário de busca -->
-
-                     <table class="table table-striped">
-
-                        <thead>
-                           <tr>
-                              <th>Cliente</th>
-                              <th>Reserva</th>
-                              <th>Check-in e Check-out</th>
-                              <th>Ações</th>
-                            </tr>
-                        </thead>
+        <div class="container">
+           <div class="row">
+              <div class="col-md-12">
+                 <form class="form_gerenciar">
+                    <div class="row">
                         
-                        <tbody>
-                           <!-- Linhas da tabela com dados das reservas -->
-                           <tr>
-                           <td>Cliente 01 <br> 123.234.456-98 </td>
-                           <td>123987 <br> Quarto 001 </td>
-                           <td>23/06/2023 <br> 25/06/2023 </td>
-                           <td>
-                              <a href="reserva.html">Mais Informações</a> <br> 
-                              <a href="alterarreserva.html" >Editar</a>
-                           </td>
-                           </tr>
-                           <tr>
-                              <td>Cliente 02 <br> 231.567.098-55 </td>
-                              <td>56748 <br> Quarto 005 </td>
-                              <td>30/06/2023 <br> 01/07/2023 </td>
-                              <td>
-                                 <a href="reserva.html">Mais Informações</a> <br> 
-                                 <a href="alterarreserva.html" >Editar</a>
-                              </td>
-                              </tr>
-                        </tbody>
-                     </table>
-                     
-                     
-     <!-- final tabela -->
-                     </div>
-                  </form>
-                  <a class="nav-link" href="admin.html">Voltar</a>
-
+                        <!-- inicio tabela minhas reservas-->
+                    <table class="table table-striped">
+                    <tbody>                       
+                       <tr>
+                        <h2> Minhas Reservas </h2>
+                            <td>
+                                <h3>Quarto Simples</h3>
+                                <p>2 pessoas</p>
+                            </td>
+                            <td>
+                                <h5>Data</h5>
+                                <p>Check in 25/10/2023</p>
+                                <p>Check out 29/10/2023</p>
+                             </td>
+                             <td>
+                                <h5>Status</h5>
+                                <p>Estadia concluída</p>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Quarto Família</h3>
+                                <p>4 pessoas</p>
+                            </td>
+                            <td>
+                                <h5>Data</h5>
+                                <p>Check in 07/07/2022</p>
+                                <p>Check out 10/07/2022</p>
+                             </td>
+                             <td>
+                                <h5>Status</h5>
+                                <p>Estadia concluída</p>
+                             </td>
+                        </tr>       
+                        <tr>
+                            <td>
+                                <h3>Quarto Simples</h3>
+                                <p>2 pessoas</p>
+                            </td>
+                            <td>
+                                <h5>Data</h5>
+                                <p>Check in 10/12/2021</p>
+                                <p>Check out 13/12/2021</p>
+                             </td>
+                             <td>
+                                <h5>Status</h5>
+                                <p>Estadia concluída</p>
+                             </td>
+                        </tr>      
+                                       
+                    </table>
+                    <!-- fim tabela minhas reservas-->
+                  </section>
+           </div>
+           <a class="nav-link" href="index.html">Voltar</a>
+        </div>
+     </div>
+  </section>
                </div>
             </div>
          </div>
       </section>
-      
       <!-- end form_lebal -->
+      
+      
+      <!--  footer -->
+      <footer id="contact">
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  
+               </div>
+            </div>
             <div class="copyright">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>Copyright 2023 All Right Reserved By <a href=" "> i6 - Tech </a></p>
-                     </div>
+                        <p>Copyright 2023 All Right Reserved By <a href=" "> i6 - Tech </a></p>                     </div>
                   </div>
                </div>
             </div>

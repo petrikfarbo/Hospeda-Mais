@@ -90,7 +90,7 @@
                         <h1> Bem-vindo ao {$nome_hotel} <br> O refúgio perfeito para a sua estadia! </h1>
                         <!--<span>LANDING PAGE 2019</span>-->
                         <p>Descubra uma experiência de hospedagem excepcional no {$nome_hotel}, onde o conforto e a elegância se encontram para criar memórias inesquecíveis. Localizado [localização], o nosso hotel é o destino ideal tanto para viajantes a negócios quanto para aqueles que desejam desfrutar de momentos relaxantes em uma atmosfera luxuosa.</p>
-                        <a href="#">Leia mais</a>
+                        <a class="read_more" href="reserveagora.html"> Reserve agora </a>
                      </div>
                   </div>
                </div>
@@ -99,36 +99,26 @@
       </section>
       <!-- end banner -->
       <!-- form_lebal -->
-      <section>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <form class="form_index">
-                     <div class="row">
-                        <div class="col-md-3">
-                           <label class="date">Check in</label>
-                           <input class="book_n"  type="date" >
-                        </div>
-                        <div class="col-md-3">
-                           <label class="date">Check out</label>
-                           <input class="book_n"  type="date" >
-                        </div>
-                        <div class="col-md-3">
-                           <label class="date">Pessoas</label>
-                           <input class="book_n" placeholder="2" type="type" name="2">
-                        </div>
-                        <div class="col-md-3">
-                           <button class="book_btn">Reserve Agora</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-      </section>
+      
       <!-- end form_lebal -->
       <!-- choose  section -->
-      <div class="choose">
+      <section>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <form class="form_index">
+                  <div class="row">
+                     <div class="titlepage">
+                        <!-- quero centralizar aqui embaico mas nao consigo -->
+                        <h2>Charme, conforto e elegância <span class="text_norlam"> </span></h2>
+                        
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section><div class="choose">
          <div class="container">
             <div class="row">
                <div class="col-md-6">
@@ -137,7 +127,7 @@
                         <h2>Acomodações de luxo <span class="text_norlam"> para todos os gostos</span></h2>
                      </div>
                      <p>No {$nome_hotel}, valorizamos a satisfação de nossos hóspedes e oferecemos uma variedade de acomodações requintadas para atender a todas as suas necessidades. Desde quartos elegantes até suítes espaçosas, cada espaço foi cuidadosamente projetado para proporcionar conforto e comodidade. Nossos quartos estão equipados com comodidades modernas, como camas confortáveis, banheiros luxuosos e acesso Wi-Fi de alta velocidade, garantindo que você tenha uma estadia relaxante e produtiva. Reserve agora e comece a criar memórias inesquecíveis</p>
-                     <a class="read_more" href="#"> Veja mais</a>
+                     <a class="read_more" href="reserveagora.html"> Reserve agora </a>
                   </div>
                </div>
                <div class="col-md-6">

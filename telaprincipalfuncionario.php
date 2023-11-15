@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
    <head>
       <!-- basic -->
       <meta charset="utf-8">
@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Realizar Reservas</title>
+      <title>Tela Funcionário</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -61,15 +61,17 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href="index.html">Tela Inicial</a>
+                                 <a class="nav-link" href=" ">Bem vindo, $funcionario</a>
                               </li>
                            </ul>
+                           <div class="sign_btn"><a href="index.html">Sair</a></div>
                         </div>
                      </nav>
                   </div>
                </div>
             </div>
          </div>
+         
       </header>
       <!-- end header inner -->
       <!-- end header -->
@@ -77,13 +79,7 @@
       <section class="banner_main">
          <div class="container">
             <div class="row">
-               <div class="col-md-12">
-                  <div class="text-bg">
-                     <div class="padding_lert">
-
-                     </div>
-                  </div>
-               </div>
+               
             </div>
          </div>
       </section>
@@ -93,59 +89,60 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <form class="form_cadastro" action="login.html" method="post">
-                    <div class="col-md-3">
-                      <label for="numero">Número do Quarto:</label>
-                      <input class="book_n" type="text" id="numero" name="numero" required>
-                   </div>
-                   <div class="col-md-3">
-                    <label for="tipo_cama">Tipo de Cama:</label>
-                    <select class="book_n" id="tipo_cama" name="tipo_cama" required>
-                      <option value="solteiro">Solteiro</option>
-                      <option value="casal">Casal</option>
-                      <option value="queen">Queen</option>
-                      <option value="king">King</option>
-                    </select>
-                    
-                    <div class="col-md-3">
-                        <label for="quantidade_camas">Quantidade de Camas:</label>
-                        <input class="book_n" type="text" id="quantidade_camas" name="quantidade_camas" required>
-                     </div>
-                 </div>
-                 <div class="col-md-3">
-                      <label for="capacidade">Capacidade:</label>
-                      <input class="book_n" type="text" id="capacidade" name="capacidade" required>
-                   </div>
-                   <div class="col-md-3">
-                    <label class="date">Check in</label>
-                    <input class="book_n"  type="date" >
-                 </div>
-                 <div class="col-md-3">
-                    <label class="date">Check out</label>
-                    <input class="book_n"  type="date" >
-                 </div>
-                 <div class="col-md-3">
-                    <label class="date">Pessoas</label>
-                    <input class="book_n" placeholder="2" type="type" name="2">
-                 </div>
-                     <div class="col-md-3">
-                      <button class="book_btn">Confirmar</button>
-                   </div>
+                  <form class="form_book" action="telaprincipal.html" method="post">
+                    <div class="nav-side-menu">
+                        <div class="brand">
+                          <h3>Menu</h3>
+                        </div>
+                        <ul class="nav-list">
+                          <li>
+                            <a href="gerenciarReserva.html">
+                              <i class="fa fa-check"></i>
+                              Gerenciar Reservas
+                            </a>
+                          </li>
+                          <li>
+                            <a href="gerenciarQuarto.html">
+                              <i class="fa fa-bed"></i>
+                              Gerenciar Quartos
+                            </a>
+                          </li>
+                          <li>
+                            <a href="gerenciarUsuario.html">
+                              <i class="fa fa-users"></i>
+                              Gerenciar Usuários
+                            </a>
+                          </li>
+                          <li>
+                            <a href="gerenciarLimpeza.html">
+                              <i class="fa fa-broom"></i>
+                              Gerenciar Limpeza
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                   </form>
-                  <a class="nav-link" href="reserva.html">Voltar</a>
-
                </div>
             </div>
          </div>
       </section>
       <!-- end form_lebal -->
-      <footer>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <p>Copyright 2023 All Right Reserved By
-                     <a href=" "> i6 - Tech </a>
-                  </p>
+      
+      
+      <!--  footer -->
+      <footer id="contact">
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>Copyright 2023 All Right Reserved By <a href=" "> i6 - Tech </a></p>                     </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -161,13 +158,6 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-      <script>
-         document.getElementById("submitBtn").addEventListener("click", function() {
-           // Aqui você pode adicionar qualquer lógica personalizada antes de redirecionar
-           // Por exemplo, validação de formulário ou manipulação de dados
-           // Após a lógica, redirecione para a página desejada usando:
-           window.location.href = "outra_pagina.html";
-         });
-      </script>
    </body>
 </html>
+

@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Reservas</title>
+      <title>Pagamento Reserva</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -30,6 +30,7 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -61,10 +62,9 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href=" ">Bem vindo, $funcionario</a>
+                                 <a class="nav-link" href="index.html">Tela Inicial</a>
                               </li>
                            </ul>
-                           <div class="sign_btn"><a href="index.html">Sair</a></div>
                         </div>
                      </nav>
                   </div>
@@ -91,59 +91,46 @@
       <!-- end banner -->
       <!-- form_lebal -->
       <section>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <form class="form_gerenciar">
-                     <div class="row">
-     <!-- inicio tabela -->
+        <div class="container">
+           <div class="row">
+              <div class="col-md-12">
+                 <form class="form_gerenciar">
+                    <div class="row">
+    <!-- inicio tabela -->
+    
+                    <!-- Formulário de pagamento -->
+                                   
+                    <section>
+                        <form action="processa_pagamento.php" method="post">                          
+                            <div class="form-group">
+                              <label for="numero_cartao">Número do cartão</label>
+                              <input type="text" class="form-control" id="numero_cartao" name="numero_cartao" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="validade">Validade</label>
+                                <input type="month" class="form-control" id="validade" name="validade" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="cvv">CVV</label>
+                              <input type="text" class="form-control" id="cvv" name="cvv" required>
+                            </div>
+                          
+                            <div class="form-group">
+                              <label for="nome_completo">Nome do titular</label>
+                              <input type="text" class="form-control" id="nome_completo" name="nome_completo" required>
+                            </div>
+                            <br>                       
+                                                     
+                            <button type="submit" class="read_more">Confirmar Pagamento</button>
+                          
+                          </form>
+                     </section>
+              </div>
+              <a class="nav-link" href="index.html">Voltar</a>
+           </div>
+        </div>
+     </section>
      
-                     <!-- Formulário de busca -->
-                     <form class="search-form">
-                        <input type="text" placeholder="Número da Reserva">
-                        <input type="submit" value="Buscar">
-                     </form>
-                     <!-- Formulário de busca -->
-
-                     <table class="table table-striped">
-
-                        <thead>
-                            <tr>
-                               <th>Quarto</th>
-                               <th>Cama</th>
-                               <th>Check-in e Check-out</th>
-                               <th>Hóspedes</th>
-                               <th>Ações</th>
-                             </tr>
-                         </thead>
-                         
-                         <tbody>
-                            <!-- Linhas da tabela com dados das reservas -->
-                            <tr>
-                            <td>Quarto 001 </td>
-                            <td>Cama de casal <br> 1 </td>
-                            <td>23/06/2023 <br> 25/06/2023 </td>
-                            <td> 2 </td>
-                           <td>
-                              <a href="alterarreserva.html">Editar</a> <br> 
-                              <a href="#" >Excluir</a>
-                           </td>
-                           </tr>
-                           
-                        </tbody>
-                     </table>
-                     
-                     
-     <!-- final tabela -->
-                     </div>
-                  </form>
-                  <a class="nav-link" href="reserva.html">Voltar</a>
-
-               </div>
-            </div>
-         </div>
-      </section>
-      
       <!-- end form_lebal -->
             <div class="copyright">
                <div class="container">
