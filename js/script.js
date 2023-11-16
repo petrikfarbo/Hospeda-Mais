@@ -36,7 +36,12 @@ $(document).ready(function(){
         }else{
             tipo_disponibilidade = 0;
         }
-
+        
+        console.log(id_quarto);
+        console.log(capacidade);
+        console.log(tipo_cama);
+        console.log(tipo_disponibilidade);
+        console.log(preco);
         $.ajax({
             type: "POST",
             url: "adicionarquartos.php",
@@ -56,7 +61,7 @@ $(document).ready(function(){
             },
             error: function (xhr, textStatus, errorThrown) {
                 // Exibe mensagens de erro no console em caso de falha na requisição
-                console.log(xhr);
+                alert(xhr.responseText);
             }
         });
     });

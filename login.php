@@ -7,7 +7,7 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
    header("Location: telaprincipal.php");
 }else {
    if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
-      header("Location: admin.php");
+      header("Location: telaprincipalfuncionario.php");
    }
    
 }

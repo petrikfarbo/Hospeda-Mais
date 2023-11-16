@@ -1,3 +1,25 @@
+<?php
+session_start();
+require_once 'models/Funcionario.php';
+require_once 'db/FuncionarioDAOMysql.php';
+
+require_once 'models/Quarto.php';
+require_once 'db/QuartoDAOMysql.php';
+
+if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
+   $id = $_SESSION['id_fun'];
+
+   $f = new FuncionarioDAOMysql();
+   $f = $f->findById($id);
+
+   $q = new QuartoDAOMysql();
+   $q = $q->findAll();
+
+}else {   
+   header("Location: login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
    <head>
@@ -59,7 +81,7 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href=" ">Bem vindo, $funcionario</a>
+                                 <a class="nav-link" href=" ">Bem vindo, <?=$f->getFun_nome();?></a>
                               </li>
                            </ul>
                            <div class="sign_btn"><a href="index.html">Sair</a></div>
@@ -94,7 +116,7 @@
                   <form class="form_gerenciar">
                      
                      <div class="row">
-                        <a class="nav-link" href="adicionarquartos.html">Adicionar Quarto</a>
+                        <a class="nav-link" href="adicionarquartos.php">Adicionar Quarto</a>
 
                         
                            <div class="col-md-12">
@@ -104,7 +126,6 @@
                                        <th>Número do Quarto</th>
                                        <th>Capacidade</th>
                                        <th>Tipo de Cama</th>
-                                       <th>Quantidade de Camas</th>
                                        <th>Disponibilidade</th>
                                        <th>Ações</th>
                                     </tr>
@@ -113,39 +134,19 @@
                                  <tbody>
                                  <!-- Aqui serão exibidos os quartos adicionados dinamicamente -->
                                  <!-- Para cada quarto adicionado, adicione uma nova linha na tabela -->
+                                 <?php foreach ($q as $value): ?>
                                  <tr>
-                                    <td>001</td>
-                                    <td>2 pessoas</td>
-                                    <td>Cama de casal</td>
-                                    <td>1</td>
-                                    <td>Disponível</td>
+                                    <td><?=$value->getId_quarto();?></td>
+                                    <td><?=$value->getQrt_capacidade();?> Pessoas</td>
+                                    <td>Cama <?=$value->getQrt_tipo_cama();?></td>
+                                    <td><?php $value->getQrt_disponivel() === 1 ? 'Disponível' : 'Indisponível' ;?></td>
                                     <td>
-                                       <a href="alterarquarto.html" >Editar</a> |
-                                       <a href="#" data-toggle="modal" data-target="#confirmDeleteModal">Excluir</a> 
+                                       <a href="alterarquarto.php?id=<?=$value->getId_quarto();?>" >Editar</a> |
+                                       <a href="excluirquarto.php?id=<?=$value->getId_quarto();?>" >Excluir</a>
                                     </td>
                                  </tr>
-                                 <tr>
-                                    <td>002</td>
-                                    <td>3 pessoas</td>
-                                    <td>Cama de solteiro</td>
-                                    <td>3</td>
-                                    <td>Indisponível</td>
-                                    <td>
-                                       <a href="alterarquarto.html">Editar</a> |
-                                          <a href="#" data-toggle="modal" data-target="#confirmDeleteModal">Excluir</a> 
-                                       </td>
-                                 </tr>
-                                 <tr>
-                                    <td>003</td>
-                                    <td>4 pessoas</td>
-                                    <td>Cama de casal</td>
-                                    <td>2</td>
-                                    <td>Disponível</td>
-                                    <td>
-                                       <a href="alterarquarto.html" >Editar</a> |
-                                          <a href="#"data-toggle="modal" data-target="#confirmDeleteModal">Excluir</a> 
-                                    </td>
-                                 </tr>
+                                 <?php endforeach;?>
+                                 
                        <!-- Adicione mais linhas para cada quarto adicionado -->
                                  </tbody>
                               </table>
@@ -186,36 +187,6 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-      <script>
-         document.getElementById("submitBtn").addEventListener("click", function() {
-           // Aqui você pode adicionar qualquer lógica personalizada antes de redirecionar
-           // Por exemplo, validação de formulário ou manipulação de dados
-           // Após a lógica, redirecione para a página desejada usando:
-           window.location.href = "outra_pagina.html";
-         });
-
-         $(document).ready(function() {
-            // Captura o evento de clique no botão "Excluir"
-            $(".btn-danger").on("click", function() {
-               // Armazena a referência do botão "Excluir" clicado
-               var deleteButton = $(this);
-
-               // Captura o evento de clique no botão "Excluir" dentro do modal
-               $("#confirmDeleteBtn").on("click", function() {
-                  // Realiza a ação de exclusão aqui (pode ser uma requisição ao servidor)
-                  // ...
-
-                  // Fecha o modal
-                  $("#confirmDeleteModal").modal("hide");
-
-                  // Exibe o popup "Excluído com sucesso"
-                  alert("Excluído com sucesso");
-
-                  // Remove a linha da tabela correspondente ao quarto excluído
-                  deleteButton.closest("tr").remove();
-               });
-            });
-         });
-      </script>
+      <script src="js/script.js"></script>
    </body>
 </html>

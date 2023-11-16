@@ -11,13 +11,14 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
 
 }else {
    if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
-      header("Location: admin.php");
+      header("Location: telaprincipalfuncionario.php");
    }
    
    header("Location: login.php");
 }
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +30,7 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Hospeda+</title>
+      <title>Principal</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -96,41 +97,85 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
       <!-- end header -->
       <!-- banner -->
       <section class="banner_main">
-         <div class="container">
-            <div class="row">
-               
-            </div>
-         </div>
-      </section>
+        <div class="container">
+           <div class="row">
+              <div class="col-md-12">
+                 <div class="text-bg">
+                    <div class="padding_lert">
+
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
       <!-- end banner -->
       <!-- form_lebal -->
       <section>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <form class="form_book" action="telaprincipal.html" method="post">
-                     <h1>Bem-vindo à Tela do Clienet</h1>
-                        <ul class="navbar-nav mr-auto">
-                           <li class="nav-item">
-                              <a class="nav-link" href="gerenciarReserva.html">Realizar Reservas</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="listarquartos.html">Gerenciar Quartos</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="gerenciarUsuario.html">Gerenciar Usuários</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="telalimpeza.html">Gerenciar Limpeza</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="pagamento.html">Gerenciar Pagamento</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="consumacao.html">Gerenciar Consumação</a>
-                           </li>
-                        </ul>
-                  </form>
+        <div class="container">
+           <div class="row">
+              <div class="col-md-12">
+                 <form class="form_gerenciar">
+                    <div class="row">
+                        
+                        <!-- inicio tabela minhas reservas-->
+                    <table class="table table-striped">
+                    <tbody>                       
+                       <tr>
+                        <h2> Minhas Reservas </h2>
+                            <td>
+                                <h3>Quarto Simples</h3>
+                                <p>2 pessoas</p>
+                            </td>
+                            <td>
+                                <h5>Data</h5>
+                                <p>Check in 25/10/2023</p>
+                                <p>Check out 29/10/2023</p>
+                             </td>
+                             <td>
+                                <h5>Status</h5>
+                                <p>Estadia concluída</p>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Quarto Família</h3>
+                                <p>4 pessoas</p>
+                            </td>
+                            <td>
+                                <h5>Data</h5>
+                                <p>Check in 07/07/2022</p>
+                                <p>Check out 10/07/2022</p>
+                             </td>
+                             <td>
+                                <h5>Status</h5>
+                                <p>Estadia concluída</p>
+                             </td>
+                        </tr>       
+                        <tr>
+                            <td>
+                                <h3>Quarto Simples</h3>
+                                <p>2 pessoas</p>
+                            </td>
+                            <td>
+                                <h5>Data</h5>
+                                <p>Check in 10/12/2021</p>
+                                <p>Check out 13/12/2021</p>
+                             </td>
+                             <td>
+                                <h5>Status</h5>
+                                <p>Estadia concluída</p>
+                             </td>
+                        </tr>      
+                                       
+                    </table>
+                    <!-- fim tabela minhas reservas-->
+                  </section>
+           </div>
+           <a class="nav-link" href="index.html">Voltar</a>
+        </div>
+     </div>
+  </section>
                </div>
             </div>
          </div>

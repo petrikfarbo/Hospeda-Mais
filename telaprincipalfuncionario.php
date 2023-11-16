@@ -1,4 +1,23 @@
+<?php
+session_start();
+require_once 'models/Funcionario.php';
+require_once 'db/FuncionarioDAOMysql.php';
 
+if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
+    $id = $_SESSION['id_fun'];
+
+    $data = new FuncionarioDAOMysql();
+    $data = $data->findById($id);
+
+}else {
+   if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
+      header("Location: telaprincipal.php");
+   }
+   
+   header("Location: login.php");
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +29,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Tela Funcionário</title>
+      <title>Hospeda+</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -61,7 +80,7 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href=" ">Bem vindo, $funcionario</a>
+                                 <a class="nav-link" href=" ">Bem vindo, <?=$data->getFun_nome();?></a>
                               </li>
                            </ul>
                            <div class="sign_btn"><a href="index.html">Sair</a></div>
@@ -90,37 +109,27 @@
             <div class="row">
                <div class="col-md-12">
                   <form class="form_book" action="telaprincipal.html" method="post">
-                    <div class="nav-side-menu">
-                        <div class="brand">
-                          <h3>Menu</h3>
-                        </div>
-                        <ul class="nav-list">
-                          <li>
-                            <a href="gerenciarReserva.html">
-                              <i class="fa fa-check"></i>
-                              Gerenciar Reservas
-                            </a>
-                          </li>
-                          <li>
-                            <a href="gerenciarQuarto.html">
-                              <i class="fa fa-bed"></i>
-                              Gerenciar Quartos
-                            </a>
-                          </li>
-                          <li>
-                            <a href="gerenciarUsuario.html">
-                              <i class="fa fa-users"></i>
-                              Gerenciar Usuários
-                            </a>
-                          </li>
-                          <li>
-                            <a href="gerenciarLimpeza.html">
-                              <i class="fa fa-broom"></i>
-                              Gerenciar Limpeza
-                            </a>
-                          </li>
+                     <h1>Bem-vindo à Tela Principal do Funcionário</h1>
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item">
+                              <a class="nav-link" href="gerenciarReserva.php">Gerenciar Reservas</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="listarquartos.php">Gerenciar Quartos</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="gerenciarUsuario.php">Gerenciar Usuários</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="telalimpeza.php">Gerenciar Limpeza</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="gerenciarpagamento.php">Gerenciar Pagamento</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="gerenciarconsumacao.php">Gerenciar Consumação</a>
+                           </li>
                         </ul>
-                      </div>
                   </form>
                </div>
             </div>

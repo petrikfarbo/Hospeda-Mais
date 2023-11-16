@@ -48,7 +48,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.php"><img src="images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -61,7 +61,7 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href="index.html">Tela Inicial</a>
+                                 <a class="nav-link" href="telaprincipalfuncionario.php">Painel</a>
                               </li>
                            </ul>
                         </div>
@@ -111,10 +111,6 @@
                         <option value="king">King</option>
                       </select>
                    </div>
-                     <div class="form-group">
-                      <label for="quantidade_camas">Quantidade de Camas:</label>
-                      <input  class="book_n" type="text" id="quantidade_camas" name="quantidade_camas" required>
-                   </div>
                    <div class="form-group">
                       <label for="disponibilidade">Disponibilidade:</label>
                       <select class="book_n" id="tipo_disponibilidade" name="tipo_disponibilidade" required>
@@ -126,8 +122,6 @@
                       <button class="book_btn">Editar</button>
                    </div>
                   </form>
-                  <a class="nav-link" href="listarquartos.html">Voltar</a>
-
                </div>
             </div>
          </div>
