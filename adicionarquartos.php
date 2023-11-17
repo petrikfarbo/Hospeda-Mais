@@ -1,5 +1,7 @@
 <?php
-session_start();
+//session_start();
+
+
 require_once 'models/Funcionario.php';
 require_once 'db/FuncionarioDAOMysql.php';
 

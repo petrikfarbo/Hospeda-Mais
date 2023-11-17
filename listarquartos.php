@@ -68,7 +68,7 @@ if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.php"><img src="images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -84,7 +84,7 @@ if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
                                  <a class="nav-link" href=" ">Bem vindo, <?=$f->getFun_nome();?></a>
                               </li>
                            </ul>
-                           <div class="sign_btn"><a href="index.html">Sair</a></div>
+                           <div class="sign_btn"><a href="index.php">Sair</a></div>
                         </div>
                      </nav>
                   </div>
@@ -155,7 +155,7 @@ if (isset($_SESSION['id_fun']) && !empty($_SESSION['id_fun'])) {
    </div>
 </form>
                  
-<a class="nav-link" href="telaprincipalfuncionario.html">Voltar</a>
+<a class="nav-link" href="telaprincipalfuncionario.php">Voltar</a>
 
               </div>
 

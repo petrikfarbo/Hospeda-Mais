@@ -46,7 +46,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.php"><img src="images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -62,7 +62,7 @@
                                  <a class="nav-link" href=" ">Bem vindo, $funcionario</a>
                               </li>
                            </ul>
-                           <div class="sign_btn"><a href="index.html">Sair</a></div>
+                           <div class="sign_btn"><a href="index.php">Sair</a></div>
                         </div>
                      </nav>
                   </div>
@@ -96,7 +96,7 @@
                      <div class="row">
      <!-- inicio tabela -->
      
-     <a class="nav-link" href="adicionarlimpeza.html">Adicionar Limpeza</a>
+     <a class="nav-link" href="adicionarlimpeza.php">Adicionar Limpeza</a>
 
 
                      <table class="table table-striped">
@@ -121,7 +121,7 @@
                               </select>
                            </td>
                            <td>
-                              <a href="alterarlimpeza.html" >Editar</a> |
+                              <a href="alterarlimpeza.php" >Editar</a> |
                               <a href="#"  data-toggle="modal" data-target="#confirmDeleteModal">Excluir</a> 
                            </td>
                            </tr>
@@ -135,7 +135,7 @@
                            </select>
                         </td>
                            <td>
-                              <a href="alterarlimpeza.html" >Editar</a> |
+                              <a href="alterarlimpeza.php" >Editar</a> |
                               <a href="#"data-toggle="modal" data-target="#confirmDeleteModal">Excluir</a> 
                            </td>
                            </tr>
@@ -149,7 +149,7 @@
                               </select>
                            </td>
                               <td>
-                                 <a href="alterarlimpeza.html" >Editar</a> |
+                                 <a href="alterarlimpeza.php" >Editar</a> |
                               <a href="#"  data-toggle="modal" data-target="#confirmDeleteModal">Excluir</a> 
                            </td>
                               </tr>
@@ -163,7 +163,7 @@
                               </select>
                            </td>
                               <td>
-                                 <a href="alterarlimpeza.html" >Editar</a> |
+                                 <a href="alterarlimpeza.php" >Editar</a> |
                               <a href="#" data-toggle="modal" data-target="#confirmDeleteModal">Excluir</a> 
                            </tr>
                         </tbody>
@@ -171,7 +171,7 @@
      <!-- final tabela -->
    </div>
 </form>
-<a class="nav-link" href="telaprincipalfuncionario.html">Voltar</a>
+<a class="nav-link" href="telaprincipalfuncionario.php">Voltar</a>
 
 </div>
 </div>

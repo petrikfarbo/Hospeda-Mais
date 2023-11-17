@@ -48,7 +48,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.php"><img src="images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -64,7 +64,7 @@
                                  <a class="nav-link" href=" ">Bem vindo, $funcionario</a>
                               </li>
                            </ul>
-                           <div class="sign_btn"><a href="index.html">Sair</a></div>
+                           <div class="sign_btn"><a href="index.php">Sair</a></div>
                         </div>
                      </nav>
                   </div>
@@ -123,8 +123,8 @@
                            <td>123987 <br> Quarto 001 </td>
                            <td>23/06/2023 <br> 25/06/2023 </td>
                            <td>
-                              <a href="reserva.html">Mais Informações</a> <br> 
-                              <a href="alterarreserva.html" >Editar</a>
+                              <a href="reserva.php">Mais Informações</a> <br> 
+                              <a href="alterarreserva.php" >Editar</a>
                            </td>
                            </tr>
                            <tr>
@@ -132,8 +132,8 @@
                               <td>56748 <br> Quarto 005 </td>
                               <td>30/06/2023 <br> 01/07/2023 </td>
                               <td>
-                                 <a href="reserva.html">Mais Informações</a> <br> 
-                                 <a href="alterarreserva.html" >Editar</a>
+                                 <a href="reserva.php">Mais Informações</a> <br> 
+                                 <a href="alterarreserva.php" >Editar</a>
                               </td>
                               </tr>
                         </tbody>
@@ -143,7 +143,7 @@
      <!-- final tabela -->
                      </div>
                   </form>
-                  <a class="nav-link" href="admin.html">Voltar</a>
+                  <a class="nav-link" href="admin.php">Voltar</a>
 
                </div>
             </div>

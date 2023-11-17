@@ -68,7 +68,7 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.php"><img src="images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -84,7 +84,7 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
                                  <a class="nav-link" href=" ">Bem vindo, <?=$data->getCli_nome();?></a>
                               </li>
                            </ul>
-                           <div class="sign_btn"><a href="index.html">Sair</a></div>
+                           <div class="sign_btn"><a href="index.php">Sair</a></div>
                         </div>
                      </nav>
                   </div>
@@ -172,7 +172,7 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
                     <!-- fim tabela minhas reservas-->
                   </section>
            </div>
-           <a class="nav-link" href="index.html">Voltar</a>
+           <a class="nav-link" href="index.php">Voltar</a>
         </div>
      </div>
   </section>
