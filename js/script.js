@@ -65,6 +65,11 @@ $(document).ready(function(){
             }
         });
     });
+
+
+    $('#btnExcluir').on('click', function () {
+        alert($('#btnExcluir').attr("name"));
+    });
     
 
 });
