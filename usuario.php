@@ -60,7 +60,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.php"><img src="images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -73,7 +73,7 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href="index.html">Tela Inicial</a>
+                                 <a class="nav-link" href="index.php">Tela Inicial</a>
                               </li>
                            </ul>
                         </div>
@@ -105,7 +105,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <form class="form_cadastro" action="login.html" method="post">
+                  <form class="form_cadastro" action="login.php" method="post">
                      <div class="row">
                         <div class="col-md-6">
                            <label class="date">Nome Completo</label>
